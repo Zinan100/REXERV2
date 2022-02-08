@@ -16,13 +16,13 @@ async def start(bot: DonLee_Robot_V2, msg: Import.Msg):
     START_BUTTON = [[
             InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('💠 GᏒԾUᎮ 💠', url='https://t.me/moviespot001100'),
-            InlineKeyboardButton('💠 CHΛИИΞL 💠', url='https://t.me/moviespot00100')
+            Import.Button('💠 GᏒԾUᎮ 💠', url='https://t.me/moviespot001100'),
+            Import.Button('💠 CHΛИИΞL 💠', url='https://t.me/moviespot00100')
             ],[
-            InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
-            InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
+            Import.Button('♻️ HΞLᎮ ♻️', callback_data='help'),
+            Import.Button('♻️ ΛBOUT ♻️', callback_data='about')
             ],[
-            InlineKeyboardButton('💠 SΞΛᏒCH HΞᏒΞ 💠', switch_inline_query_current_chat='')
+            Import.Button('💠 SΞΛᏒCH HΞᏒΞ 💠', switch_inline_query_current_chat='')
         ]]
     if not await db.is_user_exist(msg.from_user.id):
         await db.add_user(msg.from_user.id)
@@ -120,8 +120,8 @@ async def help(bot: DonLee_Robot_V2, msg: Import.Msg):
 @DonLee_Robot_V2.on_message(filters.command(["about"]) & filters.private, group=1)
 async def about(bot: DonLee_Robot_V2, msg: Import.Msg):
         button = [[
-          InlineKeyboardButton('💠 GᏒԾUᎮ 💠', url='https://t.me/moviespot001100'),
-          InlineKeyboardButton('💠 CHΛИИΞL 💠', url='https://t.me/moviespot00100')
+          Import.Button('💠 GᏒԾUᎮ 💠', url='https://t.me/moviespot001100'),
+          Import.Button('💠 CHΛИИΞL 💠', url='https://t.me/moviespot00100')
           ],[
           Import.Button("⚠️𝖧𝖾𝗅𝗉", callback_data="help"),
           Import.Button("🏠𝖧𝗈𝗆𝖾", callback_data="home"),
