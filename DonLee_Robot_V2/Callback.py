@@ -29,15 +29,15 @@ async def cb_handler(client, query):
 
     elif query.data == "home":
         button = [[
-            InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            Import.Button('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('💠 GᏒԾUᎮ 💠', url='https://t.me/moviespot001100'),
-            InlineKeyboardButton('💠 CHΛИИΞL 💠', url='https://t.me/moviespot00100')
+            Import.Button('💠 GᏒԾUᎮ 💠', url='https://t.me/moviespot001100'),
+            Import.Button('💠 CHΛИИΞL 💠', url='https://t.me/moviespot00100')
             ],[
-            InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
-            InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
+            Import.Button('♻️ HΞLᎮ ♻️', callback_data='help'),
+            Import.Button('♻️ ΛBOUT ♻️', callback_data='about')
             ],[
-            InlineKeyboardButton('💠 SΞΛᏒCH HΞᏒΞ 💠', switch_inline_query_current_chat='')
+            Import.Button('💠 SΞΛᏒCH HΞᏒΞ 💠', switch_inline_query_current_chat='')
         ]]
         await query.message.edit_text(Text.START_TEXT.format(query.from_user.mention, Config.DEV_ID), reply_markup=Import.Markup(button))
 
@@ -70,8 +70,8 @@ async def cb_handler(client, query):
 
     elif query.data == "about":
         button = [[
-          InlineKeyboardButton('💠 GᏒԾUᎮ 💠', url='https://t.me/moviespot001100'),
-          InlineKeyboardButton('💠 CHΛИИΞL 💠', url='https://t.me/moviespot00100')
+          Import.Button('💠 GᏒԾUᎮ 💠', url='https://t.me/moviespot001100'),
+          Import.Button('💠 CHΛИИΞL 💠', url='https://t.me/moviespot00100')
           ],[
           Import.Button("⚠️𝖧𝖾𝗅𝗉", callback_data="help"),
           Import.Button("🏠𝖧𝗈𝗆𝖾", callback_data="home"),
