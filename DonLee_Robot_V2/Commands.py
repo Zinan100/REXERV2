@@ -14,7 +14,7 @@ db = Database()
 @DonLee_Robot_V2.on_message(filters.command(["start", "alive"]) & filters.private)
 async def start(bot: DonLee_Robot_V2, msg: Import.Msg):
     START_BUTTON = [[
-            InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            Import.Button('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             Import.Button('💠 GᏒԾUᎮ 💠', url='https://t.me/moviespot001100'),
             Import.Button('💠 CHΛИИΞL 💠', url='https://t.me/moviespot00100')
