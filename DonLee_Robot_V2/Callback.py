@@ -29,7 +29,7 @@ async def cb_handler(client, query):
 
     elif query.data == "home":
         button = [[
-            Import.Button('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            Import.Button('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{Config.BOT_USERNAME}?startgroup=true')
             ],[
             Import.Button('💠 GᏒԾUᎮ 💠', url='https://t.me/moviespot001100'),
             Import.Button('💠 CHΛИИΞL 💠', url='https://t.me/moviespot00100')
