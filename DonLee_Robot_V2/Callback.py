@@ -28,12 +28,17 @@ async def cb_handler(client, query):
         await query.message.delete()
 
     elif query.data == "home":
-        button = [[  
-          Import.Button("➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖢𝗁𝖺𝗍𝗌 ➕", url=f"http://t.me/{Config.BOT_USERNAME}?startgroup=true")
-          ],[
-          Import.Button("⚠️ 𝖧𝖾𝗅𝗉", callback_data="help"),
-          Import.Button("𝖠𝖻𝗈𝗎𝗍 🤠", callback_data="about")
-          ]]
+        button = [[
+            InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('💠 GᏒԾUᎮ 💠', url='https://t.me/moviespot001100'),
+            InlineKeyboardButton('💠 CHΛИИΞL 💠', url='https://t.me/moviespot00100')
+            ],[
+            InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
+            InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
+            ],[
+            InlineKeyboardButton('💠 SΞΛᏒCH HΞᏒΞ 💠', switch_inline_query_current_chat='')
+        ]]
         await query.message.edit_text(Text.START_TEXT.format(query.from_user.mention, Config.DEV_ID), reply_markup=Import.Markup(button))
 
     elif query.data == "help":
@@ -65,8 +70,8 @@ async def cb_handler(client, query):
 
     elif query.data == "about":
         button = [[
-          Import.Button("👨‍💻𝖣𝖾𝗉𝗅𝗈𝗒", url='https://www.youtube.com/watch?v=NrbMc93aCzA'),
-          Import.Button("𝖲𝗈𝗎𝗋𝖼𝖾📦", callback_data="source")
+          InlineKeyboardButton('💠 GᏒԾUᎮ 💠', url='https://t.me/moviespot001100'),
+          InlineKeyboardButton('💠 CHΛИИΞL 💠', url='https://t.me/moviespot00100')
           ],[
           Import.Button("⚠️𝖧𝖾𝗅𝗉", callback_data="help"),
           Import.Button("🏠𝖧𝗈𝗆𝖾", callback_data="home"),
@@ -90,7 +95,7 @@ async def cb_handler(client, query):
     elif query.data == "filter":
         button = [[
           Import.Button("🔙 𝖡𝖺𝖼𝗄", callback_data="help"),
-          Import.Button("𝖵𝗂𝖽𝖾𝗈 📽️", url="https://youtu.be/neJ4jHC9Hng")
+          Import.Button("📢channel📢", url="https://t.me/moviespot00100")
           ]]
         await query.message.edit_text(Text.FILTER_TEXT, reply_markup=Import.Markup(button))
 
@@ -166,7 +171,7 @@ async def cb_handler(client, query):
 
     elif query.data == "source":
         button = [[
-          Import.Button("🖥️ 𝖵𝗂𝖽𝖾𝗈 🖥️", url="https://www.youtube.com/watch?v=NrbMc93aCzA"),
+          Import.Button("📢channel📢", url="https://t.me/moviespot00100"),
           ],[
           Import.Button("🔙 𝖡𝖺𝖼𝗄", callback_data="about"),
           Import.Button("𝖢𝗋𝖾𝖽𝗂𝗍𝗌 💞", callback_data="credits")
